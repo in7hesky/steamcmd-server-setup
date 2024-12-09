@@ -5,7 +5,7 @@ IMAGE_NAME="s_test"
 for id in $(docker ps -aq); do docker rm $id; done
 
 if docker images | grep -q $IMAGE_NAME; then
-	docker rm -f $IMAGE_NAME
+	docker rmi $IMAGE_NAME
 fi
 
 docker build -t $IMAGE_NAME .

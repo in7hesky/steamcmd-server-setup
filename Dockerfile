@@ -1,5 +1,5 @@
 FROM debian
 
-COPY . .
+COPY . /steamcmd-server-setup
 
-CMD ["./setup.sh"]
+CMD ["./steamcmd-server-setup/prereqs.sh"]
